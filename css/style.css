@@ -1,0 +1,151 @@
+header .nav-link {
+  position: relative;
+  margin: 0 15px;
+  /* width: 0px; */
+}
+
+header .nav-item .nav-link.active {
+  color: green !important;
+}
+
+header .nav-link::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background-color: green;
+  transition: all 0.5s;
+}
+
+header .nav-link:hover::before {
+  width: 100%;
+}
+
+header .active::before {
+  width: 100%;
+}
+/* Xử lý khi hover vào nội dung vào thanh điều hướng */
+header .nav-link:hover {
+  color: green !important;
+}
+
+/* carousel */
+
+.carousel .carousel-caption img {
+  width: 160px;
+  height: 150px;
+}
+.carousel .carousel-caption {
+  /* left: 50%;
+  top: 50%; */
+  /* transform nhận value âm cho 2 chiều giúp đẩy người phần tử nhằm mục đích canh giữua các phânf từ  */
+  /* transform: translate(-50%, -50%);
+  right: unset;
+  bottom: unset; */
+
+  top: 0;
+  left: 0;
+  background-color: rgba(39, 43, 54, 0.5);
+  width: 100%;
+  height: 100%;
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.project_content .nav-pills {
+  display: flex;
+  justify-content: center;
+
+  /* flex-direction: column; */
+}
+
+.project .nav-pills .nav-link.active {
+  color: greenyellow;
+  border-color: greenyellow;
+}
+.project .nav-link {
+  color: black;
+  border: 1px solid;
+}
+.project .nav-link:hover {
+  color: green;
+}
+.projects .nav-pills .nav-link {
+  margin: 0 5px;
+}
+.project .project_item {
+  border-radius: 8px;
+  background-color: pink;
+  text-align: center;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  animation-duration: 2s;
+}
+.project .project_item img {
+  /* border radius với 4 value sẽ đi theo hướng topleft về tay phải */
+  border-radius: 8px 8px 0 0;
+}
+.project .project_item:hover h3 {
+  color: green;
+}
+.project .project_text {
+  border: 1px solid white;
+  border-top: none;
+  transition: all 0.5s;
+  border-radius: 0 0 8px 8px;
+}
+.project .project_item:hover .project_text {
+  border-color: green;
+}
+.available {
+  background-image: url(./../image/3.jpg);
+  height: 60vh;
+  padding: 100px 0;
+  color: white;
+  /* position: relative; */
+}
+.available::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.available .available_content .avai_item {
+  background: rgba(255, 255, 255, 0.5);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+/* lưu ý đăcj biệt khi sử dụng max-widt cho reponsive: Luôn để các value max-width lớn hơn nằm trên các value nhỏ */
+/* @media screen and (max-width: 1200px) {
+  .carousel h5 {
+    color: red;
+  }
+}
+@media screen and (max-width: 576px) {
+  .project_text {
+    background-color: orange;
+  }
+  .carousel h5 {
+    color: orange;
+  }
+} */
+@media screen and (min-width: 576px) {
+  .carousel h5 {
+    color: red;
+  }
+}
+/* khi use min-width để reponsive web-site  */
+@media screen and (min-width: pp2px) {
+  .carousel h5 {
+    color: yellow;
+  }
+}
